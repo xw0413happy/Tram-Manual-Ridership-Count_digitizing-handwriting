@@ -50,6 +50,7 @@ from itertools import groupby
 
 ```http
 All uploaded .png files are used for testing.
+Please download pytesseract and then find your own tesseract path, such as, pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 ```
 
 
@@ -63,12 +64,11 @@ I took 2 python classes during my M.S. degree-seeking program, now I am a comput
 
 
 ## 🛠 Skills
-Python, R, SQL, ArcGIS, Javascript, HTML, CSS, Nlogit, Synchro, Vissim, AutoCAD, Stata
+Python, R, Stata, SQL, ArcGIS, Power BI, Tableau, Javascript, HTML, CSS, Nlogit, Synchro, Vissim, AutoCAD
 
 
 ## Acknowledgements
 
- - [LeeTran](https://www.leegov.com/leetran/how-to-ride/maps-schedules)
- - [Learn more about how to loop over images by using Python Tkinter](https://www.youtube.com/watch?v=NoTM8JciWaQ&t=565s)
- - [Genfare](https://www.genfare.com/products/)
+ - [Install pytesseract 0.3.10](https://pypi.org/project/pytesseract/)
+ - [Learn more about how to install pytesseract](https://medium.com/@marioruizgonzalez.mx/how-install-tesseract-orc-and-pytesseract-on-windows-68f011ad8b9b)
 
