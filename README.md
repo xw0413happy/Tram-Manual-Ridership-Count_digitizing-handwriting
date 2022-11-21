@@ -1,17 +1,18 @@
 
-# Probing Check GUI Desktop App
+# Image Cropping and digitize handwriting
 
-The app is basically analyzing *two separate files* to check over each other and generate a text document probe check report. 
-The **purpose** of developing this app is to target which fixed route buses are not probed and which dates are their last time probing.
 
+The beginning idea was to convert each scanned pdf into png, and then use machine learning analytics to digitize total ridership number (by using *cropping*, please look at .py codes for more details) from the images (.png). However, The idea was supspended due to the following reasons.
+- (1) when using cropping image, scanned pdf can not make sure that each cropped area will exactly locate us to "total ridership"
+- (2) even though python can recognize all numbers on images, due to less than 100% accuracy machine learning results, we couldn't find which numbers recognized by machine learnings are not correct ridership numbers.
 
 
 ## File Format
 
 This project is used by the following file formats:
 
-- **probing summary csv file**, which is downloaded from *GenFare*
-- **daily operation log folder**, which is provided by *LeeTran Operdation Department*
+- **training & testing csv files**, which is downloaded from internet (please find yourself)
+- **.png image files**, one way is writing on screen, another way to crop a specific area (to locate *total ridership*) from tram sheets
 
 
 ## Deployment
@@ -19,50 +20,37 @@ This project is used by the following file formats:
 To deploy this project run, the following modules are needed to be imported as belows.
 
 ```bash
-import pandas as pd
 import os
-import math
-import datetime
-from datetime import datetime
-from contextlib import redirect_stdout
-import tkinter as tk
-import tkinter.font as font
-from tkinter import filedialog
-from PIL import Image, ImageTk
+import pytesseract
+from pytesseract import Output
+import re
+import cv2
+import matplotlib.pyplot as plt
+from PIL import Image
+import numpy as np
+import keras
+from keras.datasets import mnist # import data
+from keras.models import Sequential
+from keras.layers import Dense, Activation, Conv2D, MaxPooling2D, Flatten, Dropout
+import tensorflow as tf
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from itertools import groupby
 ```
-
-To convert .py into .exe, copy the following command onto your Anaconda Prompt
-```bash
-auto-py-to-exe
-```
-
 
 
 ## Repository Structure
 
-#### Update key notes:
-
-
-- (1) only pick up 3-digit Bus number
-- (2) remove text in stand-by list 
-- (3) remove '/' and ' / " from stand_by_list
-
 
 | File Name | Type     | Description                |
 | :-------- | :------- | :------------------------- |
-| `ProbeCheck_V4` | `.py` | **Required**. It is the main file, updated to 4th version |
+| `digitizing handwriting` | `.py` | **Required**. It is an imcomplete file. |
 
 #### Other supplementary files description
 
 ```http
-All uploaded .xlsm files are used for testing.
+All uploaded .png files are used for testing.
 ```
-
-| File Name | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `test for opt logs hurr ian`      | `.py` | **Test file** |
-
-
 
 
 ## Author
