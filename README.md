@@ -3,7 +3,7 @@
 
 
 The beginning idea was to convert each scanned pdf into png, and then use machine learning analytics to digitize total ridership number (by using *cropping*, please look at .py codes for more details) from the images (.png). However, The idea was supspended due to the following reasons.
-- (1) when using cropping image, scanned pdf can not make sure that each cropped area will exactly locate us to "total ridership"
+- (1) when using cropping image, scanned pdf can not make sure that each cropped area will exactly locate us to "total ridership".
 - (2) even though python can recognize all numbers on images, due to less than 100% accuracy machine learning results, we couldn't find which numbers recognized by machine learnings are not correct ridership numbers.
 
 
