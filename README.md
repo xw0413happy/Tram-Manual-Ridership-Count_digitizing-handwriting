@@ -60,7 +60,7 @@ Please download pytesseract and then find your own tesseract path, such as, pyte
 
 
 ## 🚀 About Me
-I took 2 python classes during my M.S. degree-seeking program, now I am a computer language amateur, strong desire to learn more.
+M.S. in Civil Engineering, specializing in Transportation Engineering and M.S. in Information System & Analytics -- “Graduating with Pride, Striving to Make SNU Proud”
 
 
 ## 🛠 Skills
